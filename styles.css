@@ -1,0 +1,514 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 15px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .login-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar .login-button:hover {
+  background-color: #218838;
+}
+
+/* Styling untuk header tabel */
+h4.pertalite-header {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h4.pertamax-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h4.solar-header {
+  background-color: #fd7e14;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h4.dexlite-header {
+  background-color: #ffc107;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Layout untuk hari */
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.day-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Layout untuk dua shift dalam satu hari */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.set-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+}
+
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Garis Pemisah Shift 1 dan 2 */
+.table-wrapper tbody tr:nth-child(2) {
+  border-bottom: 2px solid #bbb;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td.nilai {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+td.nilai:hover {
+  background-color: #e0e0e0;
+}
+
+td.nilai:focus {
+  outline: 2px solid #007bff;
+  background-color: #fff;
+}
+
+.input-pengurang,
+.input-perkalian {
+  margin: 10px 0;
+}
+
+.input-pengurang label,
+.input-perkalian label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-pengurang input,
+.input-perkalian input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 150px;
+}
+
+h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.summary-container {
+  margin-top: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.summary-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-container th,
+.summary-container td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.summary-container th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.summary-container input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.summary-container td[colspan] {
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+/* Login Container */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(61, 141, 221);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-container button:hover {
+  background-color: rgb(0, 153, 77);
+}
+
+#error-message {
+  text-align: center;
+  margin-top: 10px;
+  color: #dc3545;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 16px;
+  }
+
+  .navbar h1 {
+    font-size: 1.3em;
+  }
+
+  .navbar .login-button {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 0.95em;
+    text-align: center;
+  }
+
+  .days-container {
+    gap: 24px;
+    padding: 0 8px;
+    margin: 12px auto;
+  }
+
+  .day-container {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .set-container {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .table-wrapper {
+    width: 100% !important;
+    min-width: 0;
+    margin-bottom: 16px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .table-wrapper table {
+    font-size: 0.95em;
+    min-width: 320px;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-wrapper th,
+  .table-wrapper td {
+    padding: 6px;
+    min-width: 60px;
+  }
+
+  .input-pengurang input,
+  .input-perkalian input {
+    width: 100%;
+    max-width: 200px;
+    font-size: 0.95em;
+    padding: 6px;
+  }
+
+  h4.pertalite-header,
+  h4.pertamax-header,
+  h4.solar-header,
+  h4.dexlite-header {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .summary-container {
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 0.95em;
+  }
+
+  .summary-container th,
+  .summary-container td {
+    padding: 8px;
+  }
+
+  .summary-container input {
+    width: 80px;
+    font-size: 0.95em;
+  }
+
+  .login-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .login-container button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  .navbar {
+    padding: 6px 12px;
+  }
+
+  .navbar h1 {
+    font-size: 1.2em;
+  }
+
+  .navbar .login-button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+
+  .days-container {
+    gap: 16px;
+    padding: 0 4px;
+    margin: 8px auto;
+  }
+
+  .day-container {
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .main-container {
+    gap: 12px;
+  }
+
+  .set-container {
+    margin-bottom: 12px;
+  }
+
+  .table-container {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .table-wrapper {
+    padding: 8px;
+  }
+
+  .table-wrapper table {
+    font-size: 0.9em;
+    min-width: 300px;
+  }
+
+  .table-wrapper th,
+  .table-wrapper td {
+    padding: 5px;
+    min-width: 50px;
+  }
+
+  .input-pengurang input,
+  .input-perkalian input {
+    max-width: 160px;
+    font-size: 0.9em;
+    padding: 5px;
+  }
+
+  h4.pertalite-header,
+  h4.pertamax-header,
+  h4.solar-header,
+  h4.dexlite-header {
+    font-size: 0.95em;
+    padding: 6px;
+  }
+
+  .summary-container {
+    padding: 10px;
+    margin-top: 16px;
+    font-size: 0.9em;
+  }
+
+  .summary-container th,
+  .summary-container td {
+    padding: 6px;
+  }
+
+  .summary-container input {
+    width: 70px;
+    font-size: 0.9em;
+  }
+
+  .login-container {
+    margin: 15px auto;
+    padding: 12px;
+    max-width: 90%;
+  }
+
+  .login-container h2 {
+    font-size: 1.2em;
+  }
+
+  .form-group input {
+    font-size: 13px;
+  }
+
+  .login-container button {
+    padding: 7px;
+    font-size: 13px;
+  }
+}
